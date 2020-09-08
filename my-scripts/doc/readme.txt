@@ -150,28 +150,27 @@ syntax: git fetch url-to-repo branchname:refs/remotes/origin/branchname
 
 $ git fetch git://github.com/meta-qt5/meta-qt5 dunfell:refs/remotes/origin/dunfell
 
+From git://github.com/meta-qt5/meta-qt5
+ * [new branch]      dunfell    -> origin/dunfell
 
-
-
-From git://github.com/Freescale/meta-freescale
- * [new branch]        dunfell    -> origin/dunfell
 
 6) Update from upstream:
 git co master
 >> git remote -v
 
-official-upstream       git://github.com/Freescale/meta-freescale (fetch)
-official-upstream       git://github.com/Freescale/meta-freescale (push)
-origin  git@github.com:RobertBerger/meta-freescale.git (fetch)
-origin  git@github.com:RobertBerger/meta-freescale.git (push)
+official-upstream       git://github.com/meta-qt5/meta-qt5 (fetch)
+official-upstream       git://github.com/meta-qt5/meta-qt5 (push)
+origin  git@github.com:RobertBerger/meta-qt5.git (fetch)
+origin  git@github.com:RobertBerger/meta-qt5.git (push)
 
 >> git fetch official-upstream
+
 remote: Counting objects: 4043, done.
 remote: Compressing objects: 100% (1273/1273), done.
 remote: Total 4043 (delta 3130), reused 3632 (delta 2727)
 Receiving objects: 100% (4043/4043), 721.50 KiB | 402.00 KiB/s, done.
 Resolving deltas: 100% (3130/3130), completed with 502 local objects.
-From git://git://github.com/Freescale/meta-freescale
+From git://git://github.com/meta-qt5/meta-qt5
    62591d9..e758547  master     -> official-upstream/master
  + 2942327...a382678 master-next -> official-upstream/master-next  (forced update)
    a3fa5ce..6a1f33c  morty      -> official-upstream/morty
@@ -180,10 +179,10 @@ From git://git://github.com/Freescale/meta-freescale
 7) My own branch:
 git co master
 git co official-upstream/dunfell
-git checkout -b 2020-08-28-dunfell
+git checkout -b 2020-09-08-dunfell
 git co master
 cd my-scripts
-./push-all-to-github.sh
+./push-upstream.sh
 
 8) apply patches
 
